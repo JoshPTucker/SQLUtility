@@ -86,4 +86,28 @@ public class SQLUtility {
 			}
 		}
 	}
+//	try {
+//		 
+//		 FileReader fr = new FileReader(name+".txt");
+//		 BufferedReader br = new BufferedReader(fr);
+//
+//		FileWriter fwr = new FileWriter(name + ".txt", APPEND);
+//		BufferedWriter bwr = new BufferedWriter(fwr);
+//		Scanner readDiary = new Scanner(br);
+//		
+//		while(readDiary.hasNext()){
+//		
+//			bwr.write(readDiary.next());	
+//		
+//		}
+//		br.close();
+//		bwr.flush();
+//	    bwr.close();
+//	    readDiary.close();
+//
+//	} catch (IOException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//
+//	}
 }
