@@ -38,7 +38,8 @@ public class SQLUtility {
 		while (true) {
 			System.out.println("SQL>");
 			String query = in.nextLine();
-
+			queryHistory.add(query);
+			String result = null;
 			Connection con = null;
 			Statement stmt = null;
 			ResultSet rs = null;
@@ -60,10 +61,13 @@ public class SQLUtility {
 				while (rs.next() && count < 10) {
 					for(int i=1;i< rsmd.getColumnCount()+1;i++){
 					System.out.print(rs.getString(i)+"\t");
+					result +=rs.getString(i)+"\t";
 					}
 					System.out.println("\n");
+					result+="\n";
 					count++;
 				}
+				resultSet.add(result);
 	
 			} catch (SQLException e) {
 				System.err.println("You have enetered an invalid sql statement");
